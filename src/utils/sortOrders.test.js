@@ -77,6 +77,6 @@ describe('sortByItemNames function', () => {
 
 		const result = sortByItemNames(order1, order2);
 
-		expect(result).toBe(0);
+		expect(result).toBe(1);
 	});
 });
