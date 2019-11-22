@@ -58,7 +58,8 @@ describe('Order component', () => {
     });
 
     it('render date correctly', () => {
-        expect(/<span>.+<\/span>/.test(component.find('div.Order-header').childAt(1).html())).toBe(true);
+        const wrapper = shallow(<Order key={0} order={order}/>);
+        expect(wrapper.containsMatchingElement(<span>9 декабря, вс, 2018 год</span>)).toEqual(true);
     });
 
     it('render date incorrectly', () => {
